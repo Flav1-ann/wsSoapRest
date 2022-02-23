@@ -1,5 +1,4 @@
-package eu.ensup;
-
+import eu.ensup.HelloWs;
 
 import javax.xml.ws.Endpoint;
 
