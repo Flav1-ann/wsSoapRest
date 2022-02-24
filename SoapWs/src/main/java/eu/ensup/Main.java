@@ -1,6 +1,5 @@
 package eu.ensup;
 
-
 import javax.xml.ws.Endpoint;
 
 public class Main {

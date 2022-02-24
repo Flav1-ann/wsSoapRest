@@ -2,9 +2,12 @@
 package client;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.ws.Action;
 
 
 /**
@@ -15,16 +18,43 @@ import javax.jws.soap.SOAPBinding;
  */
 @WebService(name = "IHello", targetNamespace = "http://ensup.eu/")
 @SOAPBinding(style = SOAPBinding.Style.RPC)
+@XmlSeeAlso({
+    ObjectFactory.class
+})
 public interface IHello {
 
 
     /**
      * 
      * @return
+     *     returns client.Track
+     */
+    @WebMethod(operationName = "CallRest")
+    @WebResult(partName = "return")
+    @Action(input = "http://ensup.eu/IHello/CallRestRequest", output = "http://ensup.eu/IHello/CallRestResponse")
+    public Track callRest();
+
+    /**
+     * 
+     * @return
      *     returns java.lang.String
      */
-    @WebMethod(operationName = "CallREst")
-    @WebResult(name = "response", partName = "response")
-    public String callREst();
+    @WebMethod(operationName = "CalltrackString")
+    @WebResult(partName = "return")
+    @Action(input = "http://ensup.eu/IHello/CalltrackStringRequest", output = "http://ensup.eu/IHello/CalltrackStringResponse")
+    public String calltrackString();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns client.ResponsesPost
+     */
+    @WebMethod(operationName = "SaveTrack")
+    @WebResult(partName = "return")
+    @Action(input = "http://ensup.eu/IHello/SaveTrackRequest", output = "http://ensup.eu/IHello/SaveTrackResponse")
+    public ResponsesPost saveTrack(
+        @WebParam(name = "arg0", partName = "arg0")
+        Track arg0);
 
 }

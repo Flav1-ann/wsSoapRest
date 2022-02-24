@@ -1,7 +1,5 @@
 package eu.ensup;
 
-
-import javax.jws.WebResult;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 
@@ -9,6 +7,7 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface IHello {
 
-    @WebResult(partName = "response")
-    String CallREst();
+    Track CallRest();
+    String CalltrackString();
+    ResponsesPost SaveTrack(Track track);
 }
