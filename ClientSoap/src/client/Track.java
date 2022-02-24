@@ -92,4 +92,10 @@ public class Track {
         this.title = value;
     }
 
+    @Override
+    public String toString() {
+        return   "{ " +
+                "'singer'=" + singer +
+                ", 'title'=" + title + '}';
+    }
 }
