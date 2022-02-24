@@ -12,7 +12,7 @@ Tomacat en java 1.8 sur le port 8080
 #Lancement de l'application
 
 1. installer le "restfulexample.war" dans votre tomcat en java 1.8 sur le port 8080
-2.verifier que le server est lancé sur ce lien : http://localhost:8080/restfulexample/rest/json/metallica/get
+2. verifier que le server est lancé sur ce lien : http://localhost:8080/restfulexample/rest/json/metallica/get
    Le resultat de ce lien : 
    ![Shemas](imageReadMe/ResultatWar.png)
 3. Rendrez-vous dans le dossier livraison a partir d'un invité de commande
