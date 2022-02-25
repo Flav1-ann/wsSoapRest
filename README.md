@@ -38,3 +38,9 @@ Ce client contact un web service SOAP ensuite le Ws SOAP contact un Ws Rest qui 
 5. Relancer un terminal et rendez-vous dans le dossier livraison 
 6. lancer la commande suivante : "java -jar wsSoapRest.jar"
    Le resultat de cette commande :![Shemas](imageReadMe/ClientSOAP.png)
+   
+#OpenAPI lancement 
+
+1. Déployer le war "OPENAPIServer.war" qui se trouve dans le dossier LivraionOpenApi sur Tomcat
+2. Rendez-vous sur http://localhost:8080/OPENAPIServer/#api-Default-createTrackInJson
+   ![Shemas](imageReadMe/OpenAPI.png)
