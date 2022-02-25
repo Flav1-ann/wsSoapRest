@@ -2,13 +2,15 @@ package eu.ensup;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import javax.jws.soap.SOAPBinding;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.core.MediaType;
 import javax.xml.ws.ResponseWrapper;
 
-@WebService(endpointInterface = "eu.ensup.IHello")
+@WebService
+@SOAPBinding(style = SOAPBinding.Style.DOCUMENT)
 public class HelloWs implements IHello{
 
     @WebMethod

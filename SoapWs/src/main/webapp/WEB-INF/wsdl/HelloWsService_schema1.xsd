@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://ensup.eu/" xmlns:tns="http://ensup.eu/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="CallRest" type="tns:CallRest"/>
+
+  <xs:element name="CallRestResponse" type="tns:CallRestResponse"/>
+
+  <xs:element name="CalltrackString" type="tns:CalltrackString"/>
+
+  <xs:element name="CalltrackStringResponse" type="tns:CalltrackStringResponse"/>
+
+  <xs:element name="SaveTrack" type="tns:SaveTrack"/>
+
+  <xs:element name="SaveTrackResponse" type="tns:SaveTrackResponse"/>
+
+  <xs:complexType name="SaveTrack">
+    <xs:sequence>
+      <xs:element name="arg0" type="tns:track" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="track">
+    <xs:sequence>
+      <xs:element name="singer" type="xs:string" minOccurs="0"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="SaveTrackResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:responsesPost" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="responsesPost">
+    <xs:sequence>
+      <xs:element name="reason" type="xs:string" minOccurs="0"/>
+      <xs:element name="status" type="xs:int" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CalltrackString">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CalltrackStringResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CallRest">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="CallRestResponse">
+    <xs:sequence>
+      <xs:element name="return" type="tns:track" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
