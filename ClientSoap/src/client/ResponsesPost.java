@@ -36,6 +36,14 @@ public class ResponsesPost {
     protected String reason;
     protected Integer status;
 
+    @Override
+    public String toString() {
+        return "ResponsesPost{" +
+                "reason='" + reason + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
     /**
      * Obtient la valeur de la propri�t� reason.
      * 
@@ -84,11 +92,4 @@ public class ResponsesPost {
         this.status = value;
     }
 
-    @Override
-    public String toString() {
-        return "ResponsesPost{" +
-                "reason='" + reason + '\'' +
-                ", status=" + status +
-                '}';
-    }
 }

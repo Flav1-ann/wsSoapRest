@@ -70,7 +70,7 @@
   </binding>
   <service name="HelloWsService">
     <port name="HelloWsPort" binding="tns:HelloWsPortBinding">
-      <soap:address location="REPLACE_WITH_ACTUAL_URL"/>
+      <soap:address location="http://localhost:8080/SOAPWs"/>
     </port>
   </service>
 </definitions>
